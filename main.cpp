@@ -38,3 +38,17 @@ public:
         return os;
     }
 };
+class FulltimeEmployee : public Employee {
+private:
+    double bonus;
+public:
+    FulltimeEmployee(int id, double salary, double bonus) : Employee(id, salary), bonus(bonus) {}
+
+    void showInfo() const override {
+        cout << "Full-Time Employee: " << id << "\nSalary: " << salary << "\nBonus: " << bonus << endl;
+    }
+
+    double calculate() const override {
+        return salary + bonus;
+    }
+};
