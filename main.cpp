@@ -52,3 +52,18 @@ public:
         return salary + bonus;
     }
 };
+class ParttimeEmployee : public Employee {
+private:
+    int hoursWorked;
+    double hourlyRate;
+public:
+    ParttimeEmployee(int id, int hours, double rate) : Employee(id, 0), hoursWorked(hours), hourlyRate(rate) {}
+
+    void showInfo() const override {
+        cout << "Part-Time Employee ID: " << id << "\nHours Worked: " << hoursWorked << "\nHourly Rate: " << hourlyRate << endl;
+    }
+
+    double calculate() const override {
+        return hoursWorked * hourlyRate;
+    }
+};
