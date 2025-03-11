@@ -89,4 +89,13 @@ public:
         }
     }
 };
+int main() {
+    PayrollManager manager;
+    manager.addEmployee(new FulltimeEmployee(1, 3000, 500));
+    manager.addEmployee(new ParttimeEmployee(2, 60, 20));
 
+    cout << "Payroll Processing: " << endl;
+    manager.processPayroll();
+
+    return 0;
+}
